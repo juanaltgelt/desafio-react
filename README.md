@@ -7,8 +7,8 @@
 1. Clona el repositorio:
 
 ```bash
-   git clone https://github.com/juanaltgelt/desafio-react.git
-   cd desafio-react
+git clone https://github.com/juanaltgelt/desafio-react.git
+cd desafio-react
 ```
 
 2. Instala las dependencias:
