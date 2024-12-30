@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Desafío React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Este proyecto es una aplicación React configurada con **Vite**, **TypeScript**, **Storybook**, y **Cypress**.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clona el repositorio:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+   git clone https://github.com/juanaltgelt/desafio-react.git
+   cd desafio-react
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instala las dependencias:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+Instala pnpm globalmente si no lo tienes:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
+```bash
+npm install -g pnpm
 ```
+
+Instala las dependencias del proyecto:
+
+```bash
+pnpm install
+```
+
+3. Inicia el servidor de desarrollo:
+
+Para iniciar el servidor de desarrollo de Vite, usa:
+
+```bash
+pnpm dev
+```
+
+## Storybook
+
+Este proyecto utiliza Storybook para desarrollar y documentar componentes de forma aislada. Sigue estos pasos para ejecutarlo:
+
+1. Inicia Storybook:
+
+```bash
+pnpm storybook
+```
+
+Esto abrirá la interfaz de Storybook en tu navegador, donde podrás ver y probar los componentes.
+
+## Pruebas End-to-End (E2E) con Cypress
+
+Este proyecto utiliza Cypress para pruebas E2E. Sigue estos pasos para ejecutarlas:
+
+### Abrir Cypress
+
+Para abrir la interfaz gráfica de Cypress, ejecuta:
+
+```bash
+npx cypress open
+```
+
+Esto abrirá la aplicación de Cypress donde podrás seleccionar las pruebas a ejecutar.
